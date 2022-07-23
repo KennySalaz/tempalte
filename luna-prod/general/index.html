@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Luna Multi Step Form</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=latin-ext"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/font.css" />
+    <link rel="stylesheet" href="css/plugins.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div class="luna-loader-container">
+        <div class="luna-loader"></div>
+    </div>
+
+    <div class='luna-signup-container'>
+        <div class="luna-signup-left-overlay"></div>
+        <div class='container'>
+            <div class="row">
+                <div class='luna-signup-left'>
+                    <img class='luna-signup-logo img-responsive'
+                        src='https://mercantilbanco.com.pa/assets/images/logo-header-mb.svg' alt="logo" />
+                    <div class="luna-navigation">
+                        <a class="toPrev prevStep"><i class="icon icon-arrow-up2"></i></a>
+                        <ul class="dots"></ul>
+                        <a class="toNext nextStep"><i class="icon icon-arrow-down2"></i></a>
+                    </div>
+                </div>
+                <div class='luna-signup-right'>
+                    <div class="container-fluid">
+                        <div class='steps-count'>
+                            Paso <span class="step-current">1</span>/<span class="step-count"></span>
+                        </div>
+                        <form action='post' name='signupForm' autocomplete="off">
+                            <div class="luna-steps">
+                                <div class="step step-active" data-step-id='1'>
+                                    <h2 class="step-title">TRAMITACIÓN DE SINIESTROS
+                                        DE RECLAMOS HCM</h2>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <div class="step-label">Tipo de poliza</div>
+                                                <label class="radio-inline"><input type="radio" value="Individual"
+                                                        name="gender" checked> Individual</label>
+                                                <label class="radio-inline"><input type="radio" value="Colectivo"
+                                                        name="gender"> Colectivo</label>
+                                                <label class="radio-inline"><input type="radio" value="Global"
+                                                        name="gender"> Global</label>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="step-label_2">Datos del intermediario</div>
+                                    <div class="row">
+
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label class="formLabel" for="phone">Codigo</label>
+                                                <input type="text" class="formInput" id='phone' name="phone"
+                                                    autocomplete="off" spellcheck="false" />
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="row">
+
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label class="formLabel" for="name">Nombre</label>
+                                                <input type="text" class="formInput" id='name' name="name"
+                                                    autocomplete="off" spellcheck="false" />
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label class="formLabel" for="lastname">Apellido</label>
+                                                <input type="text" class="formInput" id='lastname' name="lastname"
+                                                    autocomplete="off" spellcheck="false" />
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label class="formLabel" for="numero">Telefono de contacto</label>
+                                                <input type="text" class="formInput" id='numero' name="numero"
+                                                    autocomplete="off" spellcheck="false" />
+
+                                            </div>
+                                            <!--  <div class="form-group">
+                                            <label class="formLabel" for="username">Select your username?</label>
+                                            <input type="text" class="formInput" id='username' name="username" autocomplete="off" spellcheck="false" />
+                                        </div> -->
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label class="formLabel" for="email">Correo Electronico</label>
+                                                <input type="email" class="formInput" id='email' name="email"
+                                                    autocomplete="off" spellcheck="false" />
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="formLabel" for="password">What is your password?</label>
+                                            <input type="password" class="formInput" required id='password' name="password" autocomplete="off" spellcheck="false" />
+                                            <div class="help-block">Password should contain 6 digits at least</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="formLabel" for="password_confirm">Confirm Password</label>
+                                            <input type="password" class="formInput" required id='password_confirm' name="password_confirm" autocomplete="off" spellcheck="false" />
+                                        </div>
+                                    </div>
+                                </div> -->
+                                </div>
+                                <div class="step" data-step-id='2'>
+                                    <h2 class="step-title">Datos del titular / Beneficiario</h2>
+
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label class="formLabel" for="contratante">Contratante</label>
+                                                <input type="text" class="formInput" id='contratante' name="contratante"
+                                                    autocomplete="off" spellcheck="false" />
+                                            </div>
+                                        </div>
+                                        <!--  <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <div class="step-label">What is your gender?</div>
+                                            <label class="radio-inline"><input type="radio" value="Male" name="gender" checked> Male</label>
+                                            <label class="radio-inline"><input type="radio" value="Female" name="gender"> Female</label>
+                                        </div>
+                                    </div> -->
+                                        <!--  <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="formLabel" for="birthdate">Date of Birth</label>
+                                            <input type="text" class="formInput datepicker" required id='birthdate' name="birthdate" autocomplete="off" spellcheck="false" />
+                                        </div>
+                                    </div> -->
+                                    </div>
+                                    <div class="row">
+
+                                        <div class="col-sm-12">
+                                            <div class="step-label_2">Titular</div>
+                                            <div class="row">
+
+                                                <div class="col-sm-6">
+                                                    <div class="form-group">
+                                                        <label class="formLabel_2" for="ciNmro">C.l Nro</label>
+                                                        <input type="text" class="formInput" id='ciNmro' name="ciNmro"
+                                                            autocomplete="off" spellcheck="false" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="form-group">
+                                                        <label class="formLabel_2" for="nameLast">Nombre y
+                                                            Apellido</label>
+                                                        <input type="text" class="formInput" id='nameLast'
+                                                            name="nameLast" autocomplete="off" spellcheck="false" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="form-group">
+                                                        <label class="formLabel_2"
+                                                            for="phoneCell">Telefono/Celular</label>
+                                                        <input type="text" class="formInput" id='phoneCell'
+                                                            name="phoneCell" autocomplete="off" spellcheck="false" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="form-group">
+                                                        <label class="formLabel_2" for="emailCorreo">Correo
+                                                            Electronico</label>
+                                                        <input type="text" class="formInput" id='emailCorreo'
+                                                            name="emailCorreo" autocomplete="off" spellcheck="false" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12">
+                                            <div class="step-label_2">Beneficiario</div>
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <div class="form-group">
+                                                        <label class="formLabel_2" for="ciNmro2">C.l Nro</label>
+                                                        <input type="text" class="formInput" id='ciNmro2' name="ciNmro2"
+                                                            autocomplete="off" spellcheck="false" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="form-group">
+                                                        <label class="formLabel_2" for="nameLast2">Nombre y
+                                                            Apellido</label>
+                                                        <input type="text" class="formInput" id='nameLast2'
+                                                            name="nameLast2" autocomplete="off" spellcheck="false" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="form-group">
+                                                        <label class="formLabel_2"
+                                                            for="phoneCell2">Telefono/Celular</label>
+                                                        <input type="text" class="formInput" id='phoneCell2'
+                                                            name="phoneCell2" autocomplete="off" spellcheck="false" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="form-group">
+                                                        <label class="formLabel_2" for="emailCorreo2">Correo
+                                                            Electronic</label>
+                                                        <input type="text" class="formInput" id='emailCorreo2'
+                                                            name="emailCorreo2" autocomplete="off" spellcheck="false" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+
+                                    <!--   <div class="form-group">
+                                        <label class="formLabel" for="phone">What is your phone number?</label>
+                                        <input type="text" class="formInput" required id='phone' name="phone"
+                                            autocomplete="off" spellcheck="false" />
+                                        <div class="help-block">Please enter a valid 10 digit US phone number without
+                                            country code</div>
+                                    </div>
+ -->
+                                    <!-- 
+                                    <div class="form-group">
+                                        <div class="step-label">Address</div>
+                                        <textarea class="formInput" name="address" id="address"></textarea>
+                                    </div> -->
+
+                                    <!--      <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <div class="step-label">Country</div>
+                                                <select id='country' name="country" class="selectpicker form-control">
+                                                    <option>Select country</option>
+                                                    <option>Afghanistan</option>
+                                                    <option>Albania</option>
+                                                    <option>Algeria</option>
+                                                    <option>Andorra</option>
+                                                    <option>Angola</option>
+                                                    <option>Antigua and Barbuda</option>
+                                                    <option>Argentina</option>
+                                                    <option>Armenia</option>
+                                                    <option>Australia</option>
+                                                    <option>Austria</option>
+                                                    <option>Azerbaijan</option>
+                                                    <option>Bahamas</option>
+                                                    <option>Bahrain</option>
+                                                    <option>Bangladesh</option>
+                                                    <option>Barbados</option>
+                                                    <option>Belarus</option>
+                                                    <option>Belgium</option>
+                                                    <option>Belize</option>
+                                                    <option>Benin</option>
+                                                    <option>Bhutan</option>
+                                                    <option>Bolivia</option>
+                                                    <option>Bosnia and Herzegovina</option>
+                                                    <option>Botswana</option>
+                                                    <option>Brazil</option>
+                                                    <option>Brunei</option>
+                                                    <option>Bulgaria</option>
+                                                    <option>Burkina Faso</option>
+                                                    <option>Burundi</option>
+                                                    <option>Cabo Verde</option>
+                                                    <option>Cambodia</option>
+                                                    <option>Cameroon</option>
+                                                    <option>Canada</option>
+                                                    <option>Central African Republic (CAR)</option>
+                                                    <option>Chad</option>
+                                                    <option>Chile</option>
+                                                    <option>China</option>
+                                                    <option>Colombia</option>
+                                                    <option>Comoros</option>
+                                                    <option>Democratic Republic of the Congo</option>
+                                                    <option>Republic of the Congo</option>
+                                                    <option>Costa Rica</option>
+                                                    <option>Cote d'Ivoire</option>
+                                                    <option>Croatia</option>
+                                                    <option>Cuba</option>
+                                                    <option>Cyprus</option>
+                                                    <option>Czech Republic</option>
+                                                    <option>Denmark</option>
+                                                    <option>Djibouti</option>
+                                                    <option>Dominica</option>
+                                                    <option>Dominican Republic</option>
+                                                    <option>Ecuador</option>
+                                                    <option>Egypt</option>
+                                                    <option>El Salvador</option>
+                                                    <option>Equatorial Guinea</option>
+                                                    <option>Eritrea</option>
+                                                    <option>Estonia</option>
+                                                    <option>Ethiopia</option>
+                                                    <option>Fiji</option>
+                                                    <option>Finland</option>
+                                                    <option>France</option>
+                                                    <option>Gabon</option>
+                                                    <option>Gambia</option>
+                                                    <option>Georgia</option>
+                                                    <option>Germany</option>
+                                                    <option>Ghana</option>
+                                                    <option>Greece</option>
+                                                    <option>Grenada</option>
+                                                    <option>Guatemala</option>
+                                                    <option>Guinea</option>
+                                                    <option>Guinea-Bissau</option>
+                                                    <option>Guyana</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <div class="step-label">State / City</div>
+                                                <select id='city' name="city" class="selectpicker form-control">
+                                                    <option value="">Select an option</option>
+                                                    <option value="Alabama ">Alabama </option>
+                                                    <option value="Alaska ">Alaska </option>
+                                                    <option value="Arizona ">Arizona </option>
+                                                    <option value="Arkansas ">Arkansas </option>
+                                                    <option value="California ">California </option>
+                                                    <option value="Colorado ">Colorado </option>
+                                                    <option value="Connecticut ">Connecticut </option>
+                                                    <option value="Delaware ">Delaware </option>
+                                                    <option value="Florida ">Florida </option>
+                                                    <option value="Georgia ">Georgia </option>
+                                                    <option value="Hawaii ">Hawaii </option>
+                                                    <option value="Idaho ">Idaho </option>
+                                                    <option value="Illinois Indiana ">Illinois Indiana </option>
+                                                    <option value="Iowa ">Iowa </option>
+                                                    <option value="Kansas ">Kansas </option>
+                                                    <option value="Kentucky ">Kentucky </option>
+                                                    <option value="Louisiana ">Louisiana </option>
+                                                    <option value="Maine ">Maine </option>
+                                                    <option value="Maryland ">Maryland </option>
+                                                    <option value="Massachusetts ">Massachusetts </option>
+                                                    <option value="Michigan ">Michigan </option>
+                                                    <option value="Minnesota ">Minnesota </option>
+                                                    <option value="Mississippi ">Mississippi </option>
+                                                    <option value="Missouri ">Missouri </option>
+                                                    <option value="Montana Nebraska ">Montana Nebraska </option>
+                                                    <option value="Nevada ">Nevada </option>
+                                                    <option value="New Hampshire ">New Hampshire </option>
+                                                    <option value="New Jersey ">New Jersey </option>
+                                                    <option value="New Mexico ">New Mexico </option>
+                                                    <option value="New York ">New York </option>
+                                                    <option value="North Carolina ">North Carolina </option>
+                                                    <option value="North Dakota ">North Dakota </option>
+                                                    <option value="Ohio ">Ohio </option>
+                                                    <option value="Oklahoma ">Oklahoma </option>
+                                                    <option value="Oregon ">Oregon </option>
+                                                    <option value="Pennsylvania Rhode Island ">Pennsylvania Rhode Island
+                                                    </option>
+                                                    <option value="South Carolina ">South Carolina </option>
+                                                    <option value="South Dakota ">South Dakota </option>
+                                                    <option value="Tennessee ">Tennessee </option>
+                                                    <option value="Texas ">Texas </option>
+                                                    <option value="Utah ">Utah </option>
+                                                    <option value="Vermont ">Vermont </option>
+                                                    <option value="Virginia ">Virginia </option>
+                                                    <option value="Washington ">Washington </option>
+                                                    <option value="West Virginia ">West Virginia </option>
+                                                    <option value="Wisconsin ">Wisconsin </option>
+                                                    <option value="Wyoming">Wyoming</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div> -->
+
+
+
+
+
+                                </div>
+                                <div class="step" data-step-id='3'>
+                                    <h2 class="step-title">Datos de solicitud de carta Aval</h2>
+
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label class="formLabel" for="clinicaName">Clinica donde recibe el
+                                                    tratamiento</label>
+                                                <input type="text" class="formInput" id='clinicaName' name="clinicaName"
+                                                    autocomplete="off" spellcheck="false" />
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label class="formLabel" for="motoPresupuesto">Monto del
+                                                    presupuesto</label>
+                                                <input type="text" class="formInput" id='motoPresupuesto'
+                                                    name="motoPresupuesto" autocomplete="off" spellcheck="false" />
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="row">
+                                        <div class="step-label_2">Documento a consignar para el tramite de Carta Aval
+                                        </div>
+
+                                        <div class="col-sm-4">
+                                            <div class="form-group deleteMrgin">
+
+                                                <label class="radio-inline"><input type="radio" value="Copia Ampliada de la Cedula de identidad
+                                                    Titular o Beneficiario" name="gender" checked> Copia Ampliada de la
+                                                    Cedula de identidad
+                                                    Titular o Beneficiario </label>
+                                                <label class="radio-inline"><input type="radio" value="Presupuesto"
+                                                        name="gender"> Presupuesto</label>
+                                                <label class="radio-inline"><input type="radio" value="Informe medico"
+                                                        name="gender"> Informe medico </label>
+
+                                                <label class="radio-inline"><input type="radio"
+                                                        value="Resonancia Magentica" name="gender"> Resonancia Magentica
+                                                </label>
+                                                <label class="radio-inline"><input type="radio" value="Radioterapia"
+                                                        name="gender"> Radioterapia </label>
+
+
+
+
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="form-group deleteMrgin">
+                                                <label class="radio-inline"><input type="radio" value="Radioterapia"
+                                                        name="gender"> Radioterapia </label>
+                                                <label class="radio-inline"><input type="radio" value="Rehabilitacion"
+                                                        name="gender"> Rehabilitacion </label>
+
+                                                <label class="radio-inline"><input type="radio" value="Urografias"
+                                                        name="gender"> Urografias </label>
+                                                <br />
+                                                <label class="radio-inline"><input type="radio" value="Citologias"
+                                                        name="gender"> Citologias </label>
+                                                <label class="radio-inline"><input type="radio"
+                                                        value="Examenes de laboratorio" name="gender"> Examenes de
+                                                    laboratorio </label>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="col-sm-4">
+                                            <div class="form-group">
+                                                <label class="radio-inline"><input type="radio" value="Biopsias"
+                                                        name="gender"> Biopsias </label>
+                                                <label class="radio-inline"><input type="radio" value="Ecosonogramas"
+                                                        name="gender"> Ecosonogramas </label>
+                                                <label class="radio-inline"><input type="radio" value="Quimioterapia"
+                                                        name="gender"> Quimioterapia </label>
+                                                <label class="radio-inline"><input type="radio" value="Radiografias"
+                                                        name="gender"> Radiografias </label>
+                                                <br />
+
+                                                <label class="radio-inline"><input type="radio" value="Otros"
+                                                        name="gender"> Otros </label>
+                                            </div>
+
+                                        </div>
+
+
+                                    </div>
+                                    <!-- <div class="form-group">
+                                        <div class="step-label">Would you like to recieve our free catalog via postal
+                                            mail?</div>
+                                        <label class="radio-inline"><input type="radio" value="Yes"
+                                                name="requestcatalog" checked> Yes</label>
+                                        <label class="radio-inline"><input type="radio" value="No"
+                                                name="requestcatalog"> No</label>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="step-label">Which kind of communication do you prefer?</div>
+                                        <label class="radio-inline"><input type="radio" value="Email"
+                                                name="communicationprefer" checked> Email</label>
+                                        <label class="radio-inline"><input type="radio" value="Phone"
+                                                name="communicationprefer"> Phone</label>
+                                    </div> -->
+
+                                </div>
+                                <div class="step" data-step-id='4'>
+                                    <h2 class="step-title_title">Carta Aval/Reembolso</h2>
+
+                                    <div class="step-label_botton">Para los Casos de Reconsideración y Complementario
+                                        indique el Nro. de Siniestro.
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label class="formLabel" for="ClinicaRecibe">Clinica donde recibe el
+                                                    tratamiento</label>
+                                                <input type="text" class="formInput" id='ClinicaRecibe'
+                                                    name="ClinicaRecibe" autocomplete="off" spellcheck="false" />
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label class="formLabel" for="PresupuestoName">Monto del
+                                                    presupuesto</label>
+                                                <input type="text" class="formInput" id='PresupuestoName'
+                                                    name="PresupuestoName" autocomplete="off" spellcheck="false" />
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="row">
+
+                                        <div class="row">
+
+                                            <div class="col-sm-12 pl-2">
+
+                                                <div class="col-sm-6">
+
+                                                    <div class="form-group">
+                                                        <label class="formLabel" for="sinistro">Sinistro N.:</label>
+                                                        <input type="text" class="formInput" id='sinistro'
+                                                            name="sinistro" autocomplete="off" spellcheck="false" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="form-group">
+                                                        <label class="formLabel"
+                                                            for="observacion">Observaciones:</label>
+                                                        <input type="text" class="formInput" id='observacion'
+                                                            name="observacion" autocomplete="off" spellcheck="false" />
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                            <div class="col-sm-12">
+
+                                                <div class="col-sm-4">
+
+                                                    <div class="form-group deleteMrgin">
+                                                        <label class="radio-inline"><input type="radio"
+                                                                value="Reconsideración por:" name="gender" checked>
+                                                            Reconsideración por: </label>
+                                                        <label class="radio-inline"><input type="radio"
+                                                                value=" Gastos no Cubiertos" name="gender"> Gastos no
+                                                            Cubiertos</label>
+                                                        <label class="radio-inline"><input type="radio" value="Rechazo"
+                                                                name="gender"> Rechazo </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <div class="form-group deleteMrgin">
+                                                        <label class="radio-inline"><input type="radio"
+                                                                value="2da. opinión médica (Solo Carta Aval)"
+                                                                name="gender"> 2da. opinión médica (Solo Carta Aval)
+                                                        </label>
+                                                        <label class="radio-inline"><input type="radio"
+                                                                value="Siniestro Complementario" name="gender">
+                                                            Siniestro Complementario </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <div class="form-group">
+                                                        <label class="radio-inline"><input type="radio"
+                                                                value="Entrega de Recaudos" name="gender">Entrega de
+                                                            Recaudos </label>
+                                                        <label class="radio-inline"><input type="radio" value="Otros"
+                                                                name="gender">Otros </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                    <!-- <div class="form-group">
+                                        <div class="step-label">Would you like to recieve our free catalog via postal
+                                            mail?</div>
+                                        <label class="radio-inline"><input type="radio" value="Yes"
+                                                name="requestcatalog" checked> Yes</label>
+                                        <label class="radio-inline"><input type="radio" value="No"
+                                                name="requestcatalog"> No</label>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="step-label">Which kind of communication do you prefer?</div>
+                                        <label class="radio-inline"><input type="radio" value="Email"
+                                                name="communicationprefer" checked> Email</label>
+                                        <label class="radio-inline"><input type="radio" value="Phone"
+                                                name="communicationprefer"> Phone</label>
+                                    </div> -->
+
+                                </div>
+                                <div class="step" data-step-id='5'>
+                                    <h2 class="step-title_title">Datos de la Domiciliación del Pago</h2>
+
+                                    <div class="step-label_botton">Estos datos sólo deben ser llenados en caso de no
+                                        estar Domiciliado o para la Actualización de Datos
+                                    </div>
+                                    <div class="step-label_banco">
+                                        Declaro que los datos de la Cuenta Bancaria corresponden al titular de la Póliza
+                                        indicado en esta planilla
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <div class="step-label">Banco</div>
+                                                <select id='country' name="country" class="selectpicker form-control">
+                                                    <option>Selecciona el banco</option>
+                                                    <option>Banco de Venezuela S.A.</option>
+                                                    <option>Venezolano de Crédito S.A.</option>
+                                                    <option>Banco Mercantil, C.A</option>
+                                                    <option>Banco Provincial, S.A.</option>
+                                                    <option>Bancaribe C.A.</option>
+                                                    <option>Banco Exterior C.A.</option>
+                                                    <option>Banco Occidental de Descuento, C.A.</option>
+                                                    <option>Banco Caroní C.A.</option>
+                                                    <option>Banesco S.A.C.A.</option>
+                                                    <option>Banco Sofitasa C.A.</option>
+                                                    <option>Banco Plaza C.A.</option>
+                                                    <option>BFC Banco Fondo Común C.A.</option>
+                                                    <option>100% Banco, C.A.</option>
+                                                    <option>DelSur, C.A.</option>
+                                                    <option>Banco del Tesoro, C.A.</option>
+                                                    <option>Banco Agrícola de Venezuela, C.A</option>
+                                                    <option>Bancrecer, S.A.</option>
+                                                    <option>Mi Banco C.A.</option>
+                                                    <option>Banco Activo, C.A.</option>
+                                                    <option>Bancamiga, C.A.</option>
+                                                    <option>Banplus, C.A.</option>
+                                                    <option>Banco Bicentenario C.A.</option>
+                                                    <option>Banco de la Fuerza Armada Nacional Bolivariana</option>
+                                                    <option>Banco Nacional de Crédito, C.A.</option>
+
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <div class="step-label">Tipo de cuenta</div>
+                                                <label class="radio-inline"><input type="radio" value="Corriente"
+                                                        name="gender"> Corriente </label>
+                                                <label class="radio-inline"><input type="radio" value="Ahorro"
+                                                        name="gender"> Ahorro </label>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label class="formLabel" for="name">Ciudad</label>
+                                                <input type="text" class="formInput" id='name' name="name"
+                                                    autocomplete="off" spellcheck="false" />
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label class="formLabel" for="birthdate">Date of Birth</label>
+                                                <input type="text" class="formInput datepicker" id='birthdate'
+                                                    name="birthdate" autocomplete="off" spellcheck="false" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="font-classSIZE">
+                                        Datos del Asegurado: Declaro que las informaciones y documentos suministrados al
+                                        Asegurador, son verdaderas, completas y servirán de base para el cálculo de la
+                                        indemnización aquí solicitada, siempre que los gastos ocasionados estén
+                                        cubiertos por la Póliza, en caso de que proceda el reembolso y sea efectuado el
+                                        pago, Mercantil
+                                        Seguros, C.A. quedará hasta por el monto indemnizado liberado de la obligación a
+                                        su cargo, otorgándole el Finiquito de Ley.
+                                        Autorizo a los médicos y al instituto de hospitalización a proporcionar sin
+                                        reservas la información solicitada en esta planilla, así como cualquier
+                                        información adicional que
+                                        el Asegurador estime conveniente solicitar. Asimismo doy fe que las actividades
+                                        económicas desarrolladas por mi corresponden a una fuente licita.
+                                    </div>
+                                    <div class="font-classSIZE">
+                                        Mercantil Seguros, C.A. – RIF: J-000901805 – NIT: 00000-185-6-2. Inscrita en el
+                                        Registro Mercantil Primero de la Circunscripción Judicial del Distrito Federal y
+                                        Estado Miranda, el 20-02-1974,
+                                        bajo el Nro. 66, Tomo 7-A, autorizada por la Superintendencia de la Actividad
+                                        Aseguradora del Ministerio del Poder Popular de Economía y Finanzas, bajo el
+                                        Nro. 74. Dirección Sede Principal: Av.
+                                        Libertador C/A Isaías “Látigo” Chávez, Edif. Seguros Mercantil, piso 6, Urb.
+                                        Chacao, Z.P. 1060, Caracas - República Bolivariana de Venezuela. Telf. (0212)
+                                        276.2000. Apartado 61.618 (del Este)
+                                        Z.P. 1060, Direc. Cable “Censeca”. Télex 24119. Dirección Internet
+                                        www.mercantilseguros.com
+                                    </div>
+
+
+                                </div>
+                                <div class="step step-confirm" data-step-id='6'>
+                                    <h2 class="step-title">Confirmar Datos </h2>
+                                    <div class="fadeTop">
+                                        <h3 class="step-sub-title">Datos del Intermediario</h3>
+                                    </div>
+                                    <div class="row fadeTop">
+                                        <div class="col-md-3 col-sm-6 col-xs-12 text-right confirm-label">Código
+                                        </div>
+                                        <div class="col-md-9 col-sm-6 col-xs-12 confirm-text name"></div>
+                                    </div>
+                                    <div class="row fadeTop">
+                                        <div class="col-md-3 col-sm-6 col-xs-12 text-right confirm-label">Last Name
+                                        </div>
+                                        <div class="col-md-9 col-sm-6 col-xs-12 confirm-text lastname"></div>
+                                    </div>
+                                    <div class="row fadeTop">
+                                        <div class="col-md-3 col-sm-6 col-xs-12 text-right confirm-label">Username</div>
+                                        <div class="col-md-9 col-sm-6 col-xs-12 confirm-text username"></div>
+                                    </div>
+                                    <div class="row fadeTop">
+                                        <div class="col-md-3 col-sm-6 col-xs-12 text-right confirm-label">Email</div>
+                                        <div class="col-md-9 col-sm-6 col-xs-12 confirm-text email"></div>
+                                    </div>
+                                    <div class="row fadeTop">
+                                        <div class="col-md-3 col-sm-6 col-xs-12 text-right confirm-label">Password</div>
+                                        <div class="col-md-9 col-sm-6 col-xs-12 confirm-text">*******</div>
+                                    </div>
+
+                                    <div class="fadeTop">
+                                        <h3 class="step-sub-title">Datos del Titular / Beneficiario</h3>
+                                    </div>
+
+
+
+                                    <div class="row fadeTop">
+                                        <div class="col-md-3 col-sm-6 col-xs-12 text-right confirm-label">Contratante:
+                                        </div>
+                                        <div class="col-md-9 col-sm-6 col-xs-12 confirm-text gender"></div>
+                                    </div>
+                                    <div class="row">
+
+                                        <div class="col-sm-6">
+                                            <div class="fadeTop">
+                                                <h6 class="step-sub-title">Titular</h6>
+
+                                            </div>
+                                            <div class="row fadeTop">
+                                                <div class="col-md-6 col-sm-6 col-xs-12 text-right confirm-label">C.I.
+                                                    Nro.
+                                                </div>
+                                                <div class="col-md-6 col-sm-6 col-xs-12 confirm-text birthdate"></div>
+                                            </div>
+                                            <div class="row fadeTop">
+                                                <div class="col-md-6 col-sm-6 col-xs-12 text-right confirm-label">
+                                                    Nombres y Apellidos
+                                                </div>
+                                                <div class="col-md-6 col-sm-6 col-xs-12 confirm-text birthdate"></div>
+                                            </div>
+                                            <div class="row fadeTop">
+                                                <div class="col-md-6 col-sm-6 col-xs-12 text-right confirm-label">
+                                                    Teléfono / Celular
+                                                </div>
+                                                <div class="col-md-9 col-sm-6 col-xs-12 confirm-text birthdate"></div>
+                                            </div>
+                                            <div class="row fadeTop">
+                                                <div class="col-md-6 col-sm-6 col-xs-12 text-right confirm-label">Correo
+                                                    Electrónico
+                                                </div>
+                                                <div class="col-md-6 col-sm-6 col-xs-12 confirm-text birthdate"></div>
+                                            </div>
+                                        </div>
+
+
+
+                                        <div class="col-sm-6">
+                                            <div class="fadeTop">
+                                                <h3 class="step-sub-title">Beneficiario</h3>
+
+                                            </div>
+
+                                            <div class="row fadeTop">
+                                                <div class="col-md-6 col-sm-6 col-xs-12 text-right confirm-label">C.I.
+                                                    Nro.
+                                                </div>
+                                                <div class="col-md-6 col-sm-6 col-xs-12 confirm-text birthdate"></div>
+                                            </div>
+                                            <div class="row fadeTop">
+                                                <div class="col-md-6 col-sm-6 col-xs-12 text-right confirm-label">
+                                                    Nombres y Apellidos
+                                                </div>
+                                                <div class="col-md-6 col-sm-6 col-xs-12 confirm-text birthdate"></div>
+                                            </div>
+                                            <div class="row fadeTop">
+                                                <div class="col-md-6 col-sm-6 col-xs-12 text-right confirm-label">
+                                                    Teléfono / Celular
+                                                </div>
+                                                <div class="col-md-6 col-sm-6 col-xs-12 confirm-text birthdate"></div>
+                                            </div>
+                                            <div class="row fadeTop">
+                                                <div class="col-md-6 col-sm-6 col-xs-12 text-right confirm-label">Correo
+                                                    Electrónico
+                                                </div>
+                                                <div class="col-md-6 col-sm-6 col-xs-12 confirm-text birthdate"></div>
+                                            </div>
+
+                                        </div>
+
+
+                                    </div>
+
+
+
+
+
+
+
+
+                                    <div class="fadeTop">
+                                        <h3 class="step-sub-title"> Datos de Solicitud de Carta Aval</h3>
+                                    </div>
+
+
+                                    <div class="row fadeTop">
+                                        <div class="col-md-3 col-sm-6 col-xs-12 text-right confirm-label">Clínica en
+                                            donde recibirá el Tratamiento:
+                                        </div>
+                                        <div class="col-md-9 col-sm-6 col-xs-12 confirm-text birthdate"></div>
+                                    </div>
+
+                                    <div class="row fadeTop">
+                                        <div class="col-md-3 col-sm-6 col-xs-12 text-right confirm-label">Monto del
+                                            Presupuesto:
+                                        </div>
+                                        <div class="col-md-9 col-sm-6 col-xs-12 confirm-text birthdate"></div>
+                                    </div>
+
+                                    <div class="fadeTop">
+                                        <h3 class="step-sub-title"> Documentos a consignar para el Trámite de Carta Aval
+                                        </h3>
+                                    </div>
+
+
+
+
+
+                                    <div class="row fadeTop">
+                                        <div class="col-md-3 col-sm-6 col-xs-12 text-right confirm-label">Date of Birth
+                                        </div>
+                                        <div class="col-md-9 col-sm-6 col-xs-12 confirm-text birthdate"></div>
+                                    </div>
+                                    <div class="row fadeTop">
+                                        <div class="col-md-3 col-sm-6 col-xs-12 text-right confirm-label">Phone Number
+                                        </div>
+                                        <div class="col-md-9 col-sm-6 col-xs-12 confirm-text phone"></div>
+                                    </div>
+                                    <div class="row fadeTop">
+                                        <div class="col-md-3 col-sm-6 col-xs-12 text-right confirm-label">Address</div>
+                                        <div class="col-md-9 col-sm-6 col-xs-12 confirm-text">
+                                            <span class="address"></span>
+                                            <span class="country"></span>
+                                            <span class="city"></span>
+                                        </div>
+
+                                    </div>
+                                    <div class="fadeTop">
+                                        <h3 class="step-sub-title"> Carta Aval /Reembolso:
+                                        </h3>
+                                    </div>
+                                    <div class="row fadeTop">
+                                        <div class="col-md-3 col-sm-6 col-xs-12 text-right confirm-label">Siniestro Nro.:
+                                        </div>
+                                        <div class="col-md-9 col-sm-6 col-xs-12 confirm-text birthdate"></div>
+                                    </div>
+                                    <div class="row fadeTop">
+                                        <div class="col-md-3 col-sm-6 col-xs-12 text-right confirm-label">  Observaciones:
+                                        </div>
+                                        <div class="col-md-9 col-sm-6 col-xs-12 confirm-text birthdate"></div>
+                                    </div>
+                                  
+                                    <div class="fadeTop">
+                                        <h3 class="step-sub-title">Contact Information</h3>
+                                    </div>
+                                    <div class="row fadeTop">
+                                        <div class="col-md-3 col-sm-6 col-xs-12 text-right confirm-label">Receive Free
+                                            Catalog?</div>
+                                        <div class="col-md-9 col-sm-6 col-xs-12 confirm-text requestcatalog"></div>
+                                    </div>
+                                    <div class="row fadeTop">
+                                        <div class="col-md-3 col-sm-6 col-xs-12 text-right confirm-label">Communication
+                                            Preference</div>
+                                        <div class="col-md-9 col-sm-6 col-xs-12 confirm-text communicationprefer"></div>
+                                    </div>
+                                    <div class="fadeTop">
+                                        <div class="step-confirm-buttons">
+                                            <div>
+                                                <label class="checkbox-inline agreement">
+                                                    <input id="agreement" name="agreement" type="checkbox" />I agree to
+                                                    the <a href="#" target="_blank">terms of service</a>.
+                                                </label>
+                                            </div>
+                                            <a href="javascript:void(0)"
+                                                class="btn btn-green btn-rounded finishBtn">Ready,
+                                                Let's Start!</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                    </div>
+                    </form>
+                    <div class='button-container'>
+                        <div>
+                            <a href="javascript:void(0)" class="btn btn-blue btn-rounded nextStep" tabindex="0">Continue
+                                →</a>
+                            <span>or press "Enter"</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- build:js -->
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
+    <script type="text/javascript" src="js/jquery.uniform.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mask.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap-select.min.js"></script>
+    <script type="text/javascript" src="js/sweetalert.min.js"></script>
+    <script type="text/javascript" src="js/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap-datepicker.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <!-- endbuild -->
+</body>
+
+</html>

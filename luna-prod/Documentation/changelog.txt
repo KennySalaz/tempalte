@@ -1,0 +1,4 @@
+*** Changelog - Tuna Signup Form Wizard ***
+
+2017.06.25 - version 1.0
+	* First release!
